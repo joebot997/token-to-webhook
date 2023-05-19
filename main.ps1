@@ -523,7 +523,7 @@ function Invoke-ANTIVM {
       Exit
     }
 }
-Invoke-ANTIVM
+
 
 function Hide-Console
 {
